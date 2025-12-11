@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Manipulacao de DOM</title>
+
+</head>
+
+<body>
+    <h1>Meu titulo</h1>
+    <a href="http://">Meu link</a>
+    <br>
+    <img src="#">img</body>
+    <div>DIV</div>
+
+    <script>
+        const paragrafo = document.createElement('p'); //cria um novo elemento p
+        paragrafo.textContent = "Eu sou um parágrafo!"; //adiciona texto, sem esta associado ao DOM
+        paragrafo.innerHTML = "Eu sou um parágrafo em <strong>negrito</strong>!"; //outra forma de adicionar elementos DOM
+
+        const lista = document.querySelector('ul');
+        const novoItem = document.createElement('li');
+        novoItem.textContent = 'Hello World!';
+
+        lista.appendChild(novoItem); // Adicionando o novo item ao fim da lista
+
+        document.body.insertBefore(document.createElement("p"), document.querySelector("a"));   //insere o elemento p antes de a
+
+        list.removeChild(list.lastElementChild); // remove o elemento filho indicado como argumento
+        list.children[2].remove(); // remove o próprio elemento selecionado
+
+        const imagem = document.querySelector('img'); //a
+
+        imagem.hasAttribute('src'); // true
+        imagem.getAttribute('src'); // retorna o link
+        imagem.removeAttribute('src'); // remove o atributo src
+        imagem.setAttribute('src', 'https://www.imd.ufrn.br/logo.png'); // Atribui a imagem da URL ao atributo 'src' do elemento
+
+        const div = document.querySelector('div'); //altera o estilo CSS da div
+
+        div.style.borderRadius = '50%'; 
+        div.style.backgroundColor = 'lightgreen';
+        div.style.fontSize = '30px';
+
+        const activeDiv = document.querySelector('.active'); //Modificando classes de elementos do DOM com classList
+
+        activeDiv.classList.add('hidden'); // adiciona a classe 'hidden' ao elemento
+        activeDiv.classList.remove('hidden'); // remove a classe 'hidden' do elemento
+        activeDiv.classList.toggle('hidden'); // alterna entre a adição e a remoção da  classe 'hidden'
+        activeDiv.classList.replace('active', 'alert'); // Substitui a classe 'ative' pela classe 'alert'
+
+    </script>
+</body>
+</html>

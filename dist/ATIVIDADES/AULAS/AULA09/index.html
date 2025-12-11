@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi adipisci amet voluptate modi perspiciatis, natus distinctio in exercitationem rem officia officiis quisquam soluta. A iste deleniti sunt incidunt quis inventore.</p>
+    <button class="btn" type="button">OK</button>
+    <script>
+        $("p").click(); //a maioria dos eventos de DOM tem um método jQuery equivalente
+
+        $('p').click({
+            //definir um evento de clique a todos as tag p de uma página
+        })
+
+        $(document).ready(function () {
+             // só será executado após o carregamento completo da página
+        });
+
+        //O método on() permite que se atribua diversos manipuladores de eventos aos elementos selecionados:
+
+        $("p").on({
+          mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+          },
+          mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+          },
+          click: function(){
+            $(this).css("background-color", "yellow");
+          }
+        });
+
+        $(".btn").on({
+          mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+          },
+          mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+          },
+          click: function(){
+            $(this).css("background-color", "yellow");
+          }
+        });
+    </script>
+</body>
+</html>
