@@ -4,26 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário com consulta a API de CEPs</title>
-    <script src="script.js" async></script>
+    <style>
+      .inputClass {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      div {
+        width: 30%;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style>
   </head>
-  <style>
-    .inputClass {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    div {
-      width: 30%;
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-  </style>
 
   <body>
     <h3>Formulário com consulta a API de CEPs</h3>
@@ -31,20 +30,22 @@
     <div> 
       <form action="#">
         <label>CEP:</label>
-        <input id="cep" class="inputClass" />
+        <input id="cep" class="inputClass" placeholder="Digite o CEP" />
 
         <label>Rua:</label>
-        <input id="logradouro" class="inputClass" />
+        <input id="logradouro" class="inputClass" readonly />
 
         <label>Bairro:</label>
-        <input id="bairro" class="inputClass" />
+        <input id="bairro" class="inputClass" readonly />
 
         <label>Cidade:</label>
-        <input id="localidade" class="inputClass" />
+        <input id="localidade" class="inputClass" readonly />
 
         <label>Estado:</label>
-        <input id="uf" class="inputClass" />
+        <input id="uf" class="inputClass" readonly />
       </form>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

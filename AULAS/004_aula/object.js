@@ -41,7 +41,7 @@ let carro = {   //objeto literal(determinado entre as chaves), usado para defini
     }
 
     function adicionarPassageiro(obj) {
-        carro.passageiros.push('joao')
+        carro.passageiros.push(obj)
     }
 
 
@@ -54,7 +54,7 @@ let carro = {   //objeto literal(determinado entre as chaves), usado para defini
 //    console.log(carro.mecanicos[nomeMecanicos].nome)   
 //}
 
-adicionarPassageiro(carro.passageiros)    
+adicionarPassageiro(carro.passageiros('joao'))    
 
 let corDocCarro = carro.cor; //metodos de acesso de propriedades.
 let combustivel = carro["Combustivel"]

@@ -1,4 +1,5 @@
-let Document = {
+let window = {
+    document: {
     html: {
         head:{
             title:{
@@ -24,4 +25,5 @@ let Document = {
     }
 }
 
+} 
 Document.html.body.a.content

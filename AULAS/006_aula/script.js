@@ -18,8 +18,8 @@ function coordenadasMouse(e) {
 }
 
 function mudarCorQuandoTocar() {
-    circulo.style.backgroundColor = "green";
-    circulo.style.borderColor = "green";
+    circulo.style.backgroundColor = "red";
+    circulo.style.borderColor = "red";
 }
 
 // Quando o cursor do mouse se move, executa a função coordenadasMouse.

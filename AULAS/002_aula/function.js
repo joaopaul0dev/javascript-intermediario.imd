@@ -12,7 +12,7 @@ function calculoArea(area, comprimento) {
 //calculoArea(10, 20);
 
 function Ola(nome = 'estranho') { //valor do parametro inicializado
-    console.log('ola', nome+'!')
+    console.log('ola' + nome + '!')
 }
 
 //Ola('joao')
